@@ -36,7 +36,10 @@ pipeline {
 
     stage('Sonarqube - SAST') {
       steps {
-        sh "mvn sonar:sonar -Dsonar.projectKey=numeric-application -Dsonar.host.url=http://devops-deep.westeurope.cloudapp.azure.com:9000 -Dsonar.login=${SQB_TOKEN}"
+        sh "mvn clean verify sonar:sonar \
+          -Dsonar.projectKey=numeric-application \
+          -Dsonar.host.url=http://devops-deep.westeurope.cloudapp.azure.com:9000 \
+          -Dsonar.login=$SQB_TOKEN"
       }
     }
     stage('Docker Build and Pushing') {
