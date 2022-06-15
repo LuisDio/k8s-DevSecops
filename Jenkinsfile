@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   environment {
-    SQB_TOKEN = 'sqb-token'
+    SQB_TOKEN = credentials('sqb-token')
   }
 
   stages {
