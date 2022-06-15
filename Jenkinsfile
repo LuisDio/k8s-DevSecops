@@ -36,10 +36,17 @@ pipeline {
 
     stage('Sonarqube - SAST') {
       steps {
-        sh "mvn sonar:sonar \
+        withSonarQubeEnv('SonarQube') {
+          sh "mvn sonar:sonar \
           -Dsonar.projectKey=numeric-application \
           -Dsonar.host.url=http://devops-deep.westeurope.cloudapp.azure.com:9000 \
           -Dsonar.login=$SQB_TOKEN"
+        }
+        timeout(time: 2, unit: 'MINUTES') {
+          script {
+            waitForQualityGate abortPipeline: true
+          }
+        }
       }
     }
     stage('Docker Build and Pushing') {
