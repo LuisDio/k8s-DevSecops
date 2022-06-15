@@ -1,6 +1,10 @@
 pipeline {
   agent any
 
+  environment {
+    SQB_TOKEN = 'sqb-token'
+  }
+
   stages {
     stage('Build Artifact - Maven') {
       steps {
@@ -27,6 +31,15 @@ pipeline {
         always {
           pitmutation mutationStatsFile: '**/target/pit-reports/**/mutations.xml'
         }
+      }
+    }
+
+    stage('Sonarqube - SAST') {
+      steps {
+        sh "mvn sonar:sonar \ 
+          -Dsonar.projectKey=numeric-application \ 
+          -Dsonar.host.url=http://devsecops-deep.westeurope.cloudapp.azure.com:9000 \ 
+          -Dsonar.login=${SQB_TOKEN}"
       }
     }
     stage('Docker Build and Pushing') {
