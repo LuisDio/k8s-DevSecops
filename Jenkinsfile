@@ -39,8 +39,7 @@ pipeline {
         withSonarQubeEnv('SonarQube') {
           sh "mvn sonar:sonar \
           -Dsonar.projectKey=numeric-application \
-          -Dsonar.host.url=http://devops-deep.westeurope.cloudapp.azure.com:9000 \
-          -Dsonar.login=$SQB_TOKEN"
+          -Dsonar.host.url=http://devops-deep.westeurope.cloudapp.azure.com:9000"
         }
         timeout(time: 2, unit: 'MINUTES') {
           script {
