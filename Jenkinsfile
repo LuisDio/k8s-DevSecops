@@ -53,7 +53,7 @@ pipeline {
     stage('Docker Build and Pushing') {
       steps {
         withDockerRegistry([credentialsId: "docker-hub", url: ""]) {
-          sh 'docker build -t lu23/numeric-app:""$GIT_COMMIT"" .'
+          sh 'sudo docker build -t lu23/numeric-app:""$GIT_COMMIT"" .'
           sh 'docker push lu23/numeric-app:""$GIT_COMMIT""'
         }
       }
