@@ -3,5 +3,3 @@ fileignoreconfig:
   checksum: b058bbb84595454d550863a6ae7fd501863acd9692ec3cc699bc6f76dd0e38a5
 - filename: opa-conftest-dockerfile-scan.sh
   checksum: a6160876dbb753f1b0aaf3f931f883127a76874b8b06e6e78d8714cce6339539
-- filename: Jenkinsfile
-  checksum: 63cda72e9bdd61bc8b9a7b65e4a1b97a73abacdd73784c1d77bdfc70f0b4f869
