@@ -48,7 +48,8 @@ pipeline {
             sh "bash trivy-docker-image-scan.sh"
           },
           "OPA Conftest": {
-            sh "bash trivy-docker-image-scan.sh"
+            sh "opa-conftest-dockerfile-scan.sh"
+          }
         )
       }
     }
