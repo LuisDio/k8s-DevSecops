@@ -4,6 +4,6 @@ fileignoreconfig:
 - filename: opa-conftest-dockerfile-scan.sh
   checksum: a6160876dbb753f1b0aaf3f931f883127a76874b8b06e6e78d8714cce6339539
 - filename: zap.sh
-  checksum: e64fe8568fa62ebbc44a46da58b073556eae6e07ce45bb47508b70ea933727bc
+  checksum: 157d137dfbe2340b781e923799529830c8fa9573524a31b96cf223bdd7e1e327
 - filename: Jenkinsfile
   checksum: 19335d6ed09b17a54af22836872739818677cf0a85e861c617a2b689c7509618
