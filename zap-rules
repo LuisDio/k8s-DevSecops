@@ -3,5 +3,14 @@
 # Active scan rules set to IGNORE will not be run which will speed up the scan
 # Only the rule identifiers are used - the names are just for info
 # You can add your own messages to each rule by appending them after a tab on each line.
-100001	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/
 100000	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/
+100000	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/28OXD
+100000	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/PMTQC
+100000	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/compare/10IKCTM
+100000	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/comparePFZ0H
+100000	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/increment/103RLG7
+100001	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/
+100001	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/compare/10
+100001	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/compare/10/
+100001	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/?-s
+100001	IGNORE	http://devops-deep.westeurope.cloudapp.azure.com:32231/10?-s
