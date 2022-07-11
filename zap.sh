@@ -27,3 +27,4 @@ then
    exit 1;
 else
    echo "OWASP ZAP did not report any Risk"
+fi;
