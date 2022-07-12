@@ -12,5 +12,5 @@ then
     exit 1;
 else
 	echo "Deployment ${deploymentName} Rollout is Success"
-fi
+fi;
 ############### k8s-deployment-rollout-status.sh ###############
