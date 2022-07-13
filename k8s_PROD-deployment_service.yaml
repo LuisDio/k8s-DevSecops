@@ -54,4 +54,4 @@ spec:
     targetPort: 8080
   selector:
     app: devsecops
-  type: ClusterIP
+  type: NodePort
